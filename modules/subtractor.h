@@ -1,0 +1,1 @@
+void subtractor(int x, int y, char *result, size_t buffer_length);
