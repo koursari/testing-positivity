@@ -3,6 +3,10 @@
 
 void subtractor(int x, int y, char *result, size_t buffer_length)
 {
+    if (result == NULL)
+    {
+        return;
+    }
     int calculation = x - y;
     if (calculation < 0)
     {

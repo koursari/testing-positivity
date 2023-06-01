@@ -26,3 +26,10 @@ TEST(test_calculations, negative)
     subtractor(10, 12, answer, n);
     EXPECT_STREQ("NEGATIVE", answer);
 }
+
+TEST(test_calculations, acceptnullwithgrace)
+{
+    size_t n = 20;
+    char * answer = NULL;
+    ASSERT_EXIT((subtractor(0,0,answer,n),exit(0)),::testing::ExitedWithCode(0),".*");
+}
